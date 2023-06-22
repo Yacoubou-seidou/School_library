@@ -21,7 +21,6 @@
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
      - [Install](#install)
-    - [Deployment](#deployment)
   - [:busts\_in\_silhouette: Authors ](#busts_in_silhouette-authors-)
   - [:telescope: Future Features ](#telescope-future-features-)
   - [:handshake: Contributing ](#handshake-contributing-)
@@ -103,10 +102,6 @@ Use git clone command or download ZIP folder
 - bundle install
 - sudo apt bundle install (for Linux)
 ```
-### Deployment
-
-Not yet deployed ...
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## :busts_in_silhouette: Authors <a name="authors"></a>
 :bust_in_silhouette: **Yacoubou Seidou**
