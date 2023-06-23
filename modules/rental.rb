@@ -33,7 +33,7 @@ module RENTAL
     loop do
       print 'Enter valid person ID: '
       person_index = gets.strip.to_i
-      puts person_index.to_s
+      puts person_index
       break unless people[person_index].nil?
     end
     people[person_index]
