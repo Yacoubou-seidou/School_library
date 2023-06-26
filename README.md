@@ -16,6 +16,8 @@
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
      - [Install](#install)
+     -  - [Usage](#usage)
+        -  - [Deployment](#deployment)
   - [:busts\_in\_silhouette: Authors ](#busts_in_silhouette-authors-)
   - [:telescope: Future Features ](#telescope-future-features-)
   - [:handshake: Contributing ](#handshake-contributing-)
@@ -83,6 +85,15 @@ Use git clone command or download ZIP folder
 - bundle install
 - sudo apt bundle install (for Linux)
 ```
+
+### Usage 
+- `you can run this using the following commands`
+```
+- ruby main.rb 
+```
+
+### Deployment
+- N/A
 
 ## :busts_in_silhouette: Authors <a name="authors"></a>
 :bust_in_silhouette: **Yacoubou Seidou**
