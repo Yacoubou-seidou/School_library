@@ -89,6 +89,12 @@ Use git clone command or download ZIP folder
 - GitHub: [@Yacoubou-seidou](https://github.com/Yacoubou-seidou)
 - LinkedIn: [yacoubou-Seidou](https://www.linkedin.com/in/yacoubou-seidou-chaibou/)
 
+ :bust_in_silhouette: **Mercy Mugambi**
+
+- GitHub: [@mercymugambi](https://github.com/mercymugambi)
+- Twitter: [@mercymugambi](https://twitter.com/MercyMugambi15)
+- LinkedIn: [@mercymugambi](https://www.linkedin.com/in/mercymugambi/)
+
 ## :telescope: Future Features <a name="future-features"></a><br/>
 - [ ] **Add_more_methode_for_classes**<br/>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
