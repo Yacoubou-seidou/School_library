@@ -2,12 +2,8 @@
 
 <div align="center">
   <br/>
-
   <h3><b>School library</b></h3>
-
 </div>
-
-<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
@@ -16,11 +12,12 @@
   - [:hammer\_and\_wrench: Built With ](#hammer_and_wrench-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🦻 WalkThrough Video ](#-walkthrough-video-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
      - [Install](#install)
+     -  - [Usage](#usage)
+        -  - [Deployment](#deployment)
   - [:busts\_in\_silhouette: Authors ](#busts_in_silhouette-authors-)
   - [:telescope: Future Features ](#telescope-future-features-)
   - [:handshake: Contributing ](#handshake-contributing-)
@@ -28,8 +25,6 @@
   - [:pray: Acknowledgments ](#pray-acknowledgments-)
   - [:question: FAQ (OPTIONAL) ](#question-faq-optional-)
   - [📝 License ](#-license-)
-
-<!-- PROJECT DESCRIPTION -->
 
 # 📖 School library <a name="about-project"></a>
 **School_library** In this project,we are building an app to record what books are in the library and who borrows them. The app that you will create will allow you to add a new students or teachers, add new books and save records of who borrowed a given book and when.
@@ -53,8 +48,6 @@
   </ul>
 </details>
 
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
 - **Add new students**
@@ -63,16 +56,6 @@
 - **Save records of books**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- WalkThrough Video -->
-
-## 🦻 WalkThrough Video <a name="#walkthrough-demo"></a>
-
--  Comming Soon...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -103,34 +86,44 @@ Use git clone command or download ZIP folder
 - sudo apt bundle install (for Linux)
 ```
 
+### Usage 
+- `you can run this using the following commands`
+```
+- ruby main.rb 
+```
+
+### Deployment
+- N/A
+
 ## :busts_in_silhouette: Authors <a name="authors"></a>
 :bust_in_silhouette: **Yacoubou Seidou**
 - GitHub: [@Yacoubou-seidou](https://github.com/Yacoubou-seidou)
 - LinkedIn: [yacoubou-Seidou](https://www.linkedin.com/in/yacoubou-seidou-chaibou/)
-<!-- FUTURE FEATURES -->
+
+ :bust_in_silhouette: **Mercy Mugambi**
+
+- GitHub: [@mercymugambi](https://github.com/mercymugambi)
+- Twitter: [@mercymugambi](https://twitter.com/MercyMugambi15)
+- LinkedIn: [@mercymugambi](https://www.linkedin.com/in/mercymugambi/)
 
 ## :telescope: Future Features <a name="future-features"></a><br/>
 - [ ] **Add_more_methode_for_classes**<br/>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- CONTRIBUTING -->
 
 ## :handshake: Contributing <a name="contributing"></a>
 Contributions, issues, and feature requests are welcome!<br/>
 Feel free to check the [issues page](https://github.com/Yacoubou-seidou/School_library/issues).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- SUPPORT -->
 
 ## :star:️ Show your support <a name="support"></a>
 If you like this project please follow me on github & twitter and also connect on Linkedin.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- ACKNOWLEDGEMENTS -->
 
 ## :pray: Acknowledgments <a name="acknowledgements"></a>
 - I would like to thank Microverse for this exercise. <br>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- FAQ (optional) -->
 
 ## :question: FAQ (OPTIONAL) <a name="faq"></a><br/>
 - **How long can it take to build that project**
