@@ -1,6 +1,6 @@
 require 'json'
 
-module DataLoader
+module DATALOADER
   def load_data
     load_books
     load_persons
