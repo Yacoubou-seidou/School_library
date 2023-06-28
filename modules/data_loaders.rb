@@ -7,13 +7,13 @@ module DATALOADERS
   def load_books
     all_books = []
     book_file = './data/books.json'
-    if File.exist?(book_file) && !File.zero?(book_file)
+    if File.exist?(book_file) && !File.empty?(book_file)
       books_data = File.read(book_file)
       all_books = JSON.parse(books_data).map do |book|
         Book.new(book['id'], book['title'], book['author'])
       end
     else
-      puts "No book data found."
+      puts 'No book data found.'
     end
     all_books
   rescue JSON::ParserError => e
@@ -27,7 +27,7 @@ module DATALOADERS
   def load_people
     all_persons = []
     people_file = './data/persons.json'
-    if File.exist?(people_file) && !File.zero?(people_file)
+    if File.exist?(people_file) && !File.empty?(people_file)
       persons_data = File.read(people_file)
       all_persons = JSON.parse(persons_data).map do |person|
         if person['className'] == 'Student'
@@ -37,27 +37,21 @@ module DATALOADERS
         end
       end
     else
-      puts "No person data found."
+      puts 'No person data found.'
     end
     all_persons
-  rescue JSON::ParserError => e
-    puts "An error occurred while parsing person data: #{e.message}"
-    []
-  rescue StandardError => e
-    puts "An error occurred while loading person data: #{e.message}"
-    []
   end
 
   def load_rentals
     all_rentals = []
     rental_file = './data/rentals.json'
-    if File.exist?(rental_file) && !File.zero?(rental_file)
+    if File.exist?(rental_file) && !File.empty?(rental_file)
       rentals_data = File.read(rental_file)
       all_rentals = JSON.parse(rentals_data).map do |rental|
         Rental.new(rental['date'], person(rental['person_id']), book(rental['book_id']))
       end
     else
-      puts "No rental data found."
+      puts 'No rental data found.'
     end
     all_rentals
   rescue JSON::ParserError => e
