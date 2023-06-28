@@ -16,12 +16,6 @@ module DATALOADERS
       puts 'No book data found.'
     end
     all_books
-  rescue JSON::ParserError => e
-    puts "An error occurred while parsing book data: #{e.message}"
-    []
-  rescue StandardError => e
-    puts "An error occurred while loading book data: #{e.message}"
-    []
   end
 
   def load_people
@@ -54,11 +48,5 @@ module DATALOADERS
       puts 'No rental data found.'
     end
     all_rentals
-  rescue JSON::ParserError => e
-    puts "An error occurred while parsing rental data: #{e.message}"
-    []
-  rescue StandardError => e
-    puts "An error occurred while loading rental data: #{e.message}"
-    []
   end
 end
