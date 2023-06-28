@@ -35,12 +35,18 @@ end
 
 def main
   app = App.new
+  app.load_books
+  app.load_people
+  app.load_rentals
   loop do
     show_menu
     input = gets.chomp
     process_input(app, input) if (1..7).to_a.include?(input.to_i)
     invalid_option unless (1..7).to_a.include?(input.to_i)
     if input.to_i == 7
+      app.save_books
+      app.save_persons
+      app.save_rentals
       puts 'Goodbye see you soon!'
       break
     end
