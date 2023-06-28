@@ -16,11 +16,11 @@ class App
   include PERSON
   include RENTAL
   include SAVEDATA
-  extend DATALOADERS
+  include DATALOADERS
 
-  def self.load_data
-    load_books
-    load_people
-    load_rentals
-  end
+  # def self.load_data
+  #   load_books
+  #   load_people
+  #   load_rentals
+  # end
 end

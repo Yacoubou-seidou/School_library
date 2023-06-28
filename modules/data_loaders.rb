@@ -5,18 +5,24 @@ module DATALOADERS
   include SAVEDATA
 
   def load_books
-    all_books = []
+    all_books = nil
     book_file = './data/books.json'
-    if File.exist?(book_file) && !File.empty?(book_file)
+    if File.exist?(book_file)
       books_data = File.read(book_file)
-      all_books = JSON.parse(books_data).map do |book|
-        Book.new(book['id'], book['title'], book['author'])
-      end
+      all_books = JSON.parse(books_data)
     else
       puts 'No book data found.'
     end
-    all_books
+    return unless all_books
+    all_books.each do |book|
+      id = book['id']
+      title = book['title']
+      author = book['author']
+      new_books = Book.new(title, author, id: id)
+      @books << new_books
+    end
   end
+
 
   def load_people
     all_persons = []
