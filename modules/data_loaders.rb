@@ -55,25 +55,49 @@ module DATALOADERS
   end
 
   def add_teacher(person)
-    age = person['age']
-    specialization = person['specialization']
-    name = person['name']
-    id = person['id']
-    new_teacher = Teacher.new(age, specialization, name, id: id)
-    @teachers << new_teacher
-  end
+  age = person['age']
+  specialization = person['specialization']
+  name = person['name']
+  id = person['id']
+  new_teacher = Teacher.new(age, specialization, name, id: id)
+  @teachers << new_teacher
+end
 
-  def load_rentals
-    all_rentals = []
-    rental_file = './data/rentals.json'
-    if File.exist?(rental_file) && !File.empty?(rental_file)
-      rentals_data = File.read(rental_file)
-      all_rentals = JSON.parse(rentals_data).map do |rental|
-        Rental.new(rental['date'], person(rental['person_id']), book(rental['book_id']))
+def find_person_by_id(person_id)
+  person = @students.find { |student| student.id == person_id }
+  person ||= @teachers.find { |teacher| teacher.id == person_id }
+  person
+end
+
+def find_book_by_id(book_id)
+  @books.find { |book| book.id == book_id }
+end
+
+def load_rentals
+  rental_file = './data/rentals.json'
+
+  if File.exist?(rental_file)
+    rentals_data = File.read(rental_file)
+    all_rentals = JSON.parse(rentals_data)
+
+    all_rentals.each do |rental|
+      person_id = rental['person_id']
+      book_id = rental['book_id']
+      date = rental['date']
+
+      person = find_person_by_id(person_id)
+      book = find_book_by_id(book_id)
+
+      if person && book
+        new_rental = Rental.new(date, book, person)
+        @rentals << new_rental
+      else
+        puts "Person or book not found for rental with person_id: #{person_id} and book_id: #{book_id}"
       end
-    else
-      puts 'No rental data found.'
     end
-    all_rentals
+  else
+    puts 'No rental data found.'
   end
+end
+
 end
