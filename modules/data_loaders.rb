@@ -14,6 +14,7 @@ module DATALOADERS
       puts 'No book data found.'
     end
     return unless all_books
+
     all_books.each do |book|
       id = book['id']
       title = book['title']
@@ -23,23 +24,43 @@ module DATALOADERS
     end
   end
 
-
   def load_people
-    all_persons = []
-    people_file = './data/persons.json'
-    if File.exist?(people_file) && !File.empty?(people_file)
-      persons_data = File.read(people_file)
-      all_persons = JSON.parse(persons_data).map do |person|
-        if person['className'] == 'Student'
-          Student.new(person['id'], person['age'], person['name'], person['parent_permission'], person['classroom'])
-        else
-          Teacher.new(person['id'], person['name'], person['age'], person['specialization'])
-        end
+    all_persons = load_persons_from_file('./data/persons.json')
+    return [] unless all_persons
+
+    all_persons.each do |person|
+      if person['className'] == 'Student'
+        add_student(person)
+      else
+        add_teacher(person)
       end
-    else
-      puts 'No person data found.'
     end
-    all_persons
+  end
+
+  def load_persons_from_file(file_path)
+    return [] unless File.exist?(file_path) && !File.empty?(file_path)
+
+    persons_data = File.read(file_path)
+    JSON.parse(persons_data)
+  end
+
+  def add_student(person)
+    id = person['id']
+    age = person['age']
+    name = person['name']
+    parent_permission = person['parent_permission']
+    classroom = person['classroom']
+    new_student = Student.new(id, age, name, parent_permission, classroom)
+    @students << new_student
+  end
+
+  def add_teacher(person)
+    age = person['age']
+    specialization = person['specialization']
+    name = person['name']
+    id = person['id']
+    new_teacher = Teacher.new(age, specialization, name, id: id)
+    @teachers << new_teacher
   end
 
   def load_rentals

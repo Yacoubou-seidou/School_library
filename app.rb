@@ -17,10 +17,4 @@ class App
   include RENTAL
   include SAVEDATA
   include DATALOADERS
-
-  # def self.load_data
-  #   load_books
-  #   load_people
-  #   load_rentals
-  # end
 end

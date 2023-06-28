@@ -36,6 +36,7 @@ end
 def main
   app = App.new
   app.load_books
+  app.load_people
   loop do
     show_menu
     input = gets.chomp
