@@ -22,6 +22,8 @@ Metrics/BlockLength:
 
 Style/Documentation:
   Enabled: false
+Naming/VariableNumber:
+  Enabled: false
 Style/ClassAndModuleChildren:
   Enabled: false
 Style/EachForSimpleLoop:
