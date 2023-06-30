@@ -18,31 +18,31 @@ class SolverTest < Test::Unit::TestCase
   end
 
   def test_reverse_word
-    assert_equal("olleh", @solver.reverse("hello"))
+    assert_equal('olleh', @solver.reverse('hello'))
   end
 
   def test_fizzbuzz_divisible_by_3
-    assert_equal("fizz", @solver.fizzbuzz(9))
+    assert_equal('fizz', @solver.fizzbuzz(9))
   end
 
   def test_fizzbuzz_divisible_by_5
-    assert_equal("buzz", @solver.fizzbuzz(10))
+    assert_equal('buzz', @solver.fizzbuzz(10))
   end
 
   def test_fizzbuzz_divisible_by_3_and_5
-    assert_equal("fizzbuzz", @solver.fizzbuzz(15))
+    assert_equal('fizzbuzz', @solver.fizzbuzz(15))
   end
 
   def test_fizzbuzz_not_divisible_by_3_or_5
-    assert_equal("7", @solver.fizzbuzz(7))
+    assert_equal('7', @solver.fizzbuzz(7))
   end
 end
 
 class Solver
-  def factorial(n)
-    raise ArgumentError, "Input must be a non-negative integer" if n.negative?
+  def factorial(num)
+    raise ArgumentError, 'Input must be a non-negative integer' if num.negative?
 
-    return 1 if n.zero?
+    return 1 if num.zero?
 
     result = 1
     (1..n).each do |i|
@@ -55,15 +55,15 @@ class Solver
     word.reverse
   end
 
-  def fizzbuzz(n)
-    if n % 3 == 0 && n % 5 == 0
-      return "fizzbuzz"
-    elsif n % 3 == 0
-      return "fizz"
-    elsif n % 5 == 0
-      return "buzz"
+  def fizzbuzz(num)
+    if (num % 3).zero? && (num % 5).zero?
+      'fizzbuzz'
+    elsif (num % 3).zero?
+      'fizz'
+    elsif (num % 5).zero?
+      'buzz'
     else
-      return n.to_s
+      num.to_s
     end
   end
 end
